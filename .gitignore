@@ -1,0 +1,15 @@
+__pycache__/
+.virtual_documents/
+notebooks/.ipynb_checkpoints/
+.cache/
+trajectories/
+output/
+output_main/
+envinfo_output/
+envinfo_output_main/
+true_Q_output/
+true_V_output/
+true_pi_output/
+abs_optimal/*love*
+test*
+*old*

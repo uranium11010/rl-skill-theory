@@ -1,0 +1,20 @@
+python train_rl.py \
+    --expt_name few_abs_extra_trunc_s1 \
+    --env CompILE-v0  --env_config "{'visit_length': 2}" \
+    --rl_algo REINFORCE \
+    --abs_path envinfo_output_main/CompILE-v0_s1w10h10n6v2/few_abs_extra_s1/all_abstractions.json \
+    --truncate_steps 50 \
+    --truncate_base_steps 100 \
+    --lr 0.1 \
+    --n_env_steps 100000000 \
+    --early_stop_reward 0.95 \
+    --test_every 50 \
+    --test_every_ratio 1.005 \
+    --test_episodes 200 \
+    --test_no_greedy \
+    --true_model_path true_pi_output/CompILE-v0_s1w10h10n6v2_QLearning_no-expl/few_abs_extra_s1/ \
+    --mask_model_errs \
+    --model_err_metric wmean_kl \
+    --save_every 1000 \
+    --use_gpu \
+    --seed 1

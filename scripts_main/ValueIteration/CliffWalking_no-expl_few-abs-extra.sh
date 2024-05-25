@@ -1,0 +1,12 @@
+python train_rl.py \
+    --expt_name few_abs_extra \
+    --env CliffWalking-v0 \
+    --rl_algo ValueIteration \
+    --no_explore \
+    --abs_path envinfo_output_main/CliffWalking-v0/few_abs_extra/all_abstractions.json \
+    --lr 0.1 \
+    --early_stop_reward 0.99 \
+    --early_stop_model_err 0.001 \
+    --model_err_metric wmean_abs_err \
+    --true_model_path true_V_output/CliffWalking-v0_ValueIteration_no-expl/few_abs_extra/ \
+    --use_gpu

@@ -1,0 +1,11 @@
+python train_rl.py \
+    --output_path true_V_output \
+    --expt_name few_abs_extra \
+    --env CompILE-v0  --env_config "{'visit_length': 2}" \
+    --rl_algo ValueIteration \
+    --no_explore \
+    --abs_path envinfo_output_main/CompILE-v0_s1w10h10n6v2/few_abs_extra/all_abstractions.json \
+    --lr 1.0 \
+    --n_episodes 100 \
+    --td_moving_avg 1.0 \
+    --use_gpu

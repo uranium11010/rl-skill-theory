@@ -1,0 +1,21 @@
+python train_rl.py \
+    --expt_name love_trunc_replay_adapteps_s1 \
+    --env NPuzzle-v0  --env_config "{'size': 3}" \
+    --rl_algo QLearning \
+    --deep --love \
+    --love_ckpt_path abs_optimal/8Puzzle_love_s2/model-20000.ckpt \
+    --love_model_config_path abs_scripts/love_configs/8Puzzle.json \
+    --love_traj_path trajectories/NPuzzle-v0_N8_traj.pkl \
+    --truncate_steps 50 \
+    --truncate_base_steps 100 \
+    --lr 0.0005 \
+    --n_env_base_steps 10000000 \
+    --early_stop_reward 0.95 \
+    --test_every 100 \
+    --test_every_ratio 1.005 \
+    --test_episodes 200 \
+    --use_replay_buffer \
+    --adaptive_eps_greedy \
+    --save_every 1000 \
+    --use_gpu \
+    --seed 1

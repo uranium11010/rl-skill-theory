@@ -1,0 +1,9 @@
+numpy
+scipy
+matplotlib
+tqdm
+jupyter
+gymnasium
+rubiks_cube_gym
+wandb
+colorama
