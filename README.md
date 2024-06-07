@@ -1,4 +1,18 @@
-# Simulations supporting theoretical analysis of macroactions in RL
+# rl-skill-theory
+
+This repository contains code for our ICML 2024 paper,
+[When Do Skills Help Reinforcement Learning? A Theoretical Analysis of Temporal Abstractions](https://icml.cc/virtual/2024/poster/35079).
+If you use this code, please cite:
+```bibtex
+@inproceedings{li2022rlskilltheory,
+  title={When Do Skills Help Reinforcement Learning? A Theoretical Analysis of Temporal Abstractions},
+  author={Li, Zhening and Poesia, Gabriel and Solar-Lezama, Armando},
+  booktitle={Proceedings of the 41st International Conference on Machine Learning},
+  year={2024}
+}
+```
+
+## Setup
 
 We use Python 3.9. Run
 ```
@@ -70,7 +84,14 @@ Follow the following steps to reproduce our experimental results.
    Since there are over a hundred scripts to run,
    we use the script [`track_unfinished.py`](track_unfinished.py) for tracking which runs have completed,
    are in progress, or have not begun.
-5. For hRL with LOVE options, first download
+
+   We also provide scripts for the following deep RL algorithms that we did not get a chance to experiment on.
+   They use the same neural state embedders as DQN:
+    * Deep value iteration: [`scripts_main/ValueIteration/ENV_deep_few-abs-extra-trunc-replay-adapteps[_sN].sh`](scripts_main/ValueIteration/) *(not implemented)*
+    * Deep REINFORCE: [`scripts_main/REINFORCE/ENV_deep_few-abs-extra-trunc[_sN].sh`](scripts_main/REINFORCE/)
+   
+   *(Note: We have not yet implemented deep value iteration, so those scripts will not run properly.)*
+6. For hRL with LOVE options, first download
    [this zip file](https://drive.google.com/file/d/14hbTFdXMnokwsbZ-NfF7AA0OLYTEIkOd/view?usp=sharing)
    to the root of the repository. It contains LOVE options trained on offline trajectory data
    from each base environment. Extract its contents into `abs_optimal/`:
@@ -89,7 +110,7 @@ Follow the following steps to reproduce our experimental results.
    from a few seconds (`CliffWalking`) to a couple of days (`RubiksCube222`).
    As with the training runs for LEMMA abstractions,
    the script [`track_unfinished.py`](track_unfinished.py) can be used to track progress.
-6. To analyze the experimental results, use the Jupyter notebook [`notebooks/analysis.ipynb`](notebooks/analysis.ipynb).
+7. To analyze the experimental results, use the Jupyter notebook [`notebooks/analysis.ipynb`](notebooks/analysis.ipynb).
 
 We have provided the learnt LEMMA macroactions under [`abs_optimal/`](abs_optimal/)
 and LOVE options in [this zip file](https://drive.google.com/file/d/14hbTFdXMnokwsbZ-NfF7AA0OLYTEIkOd/view?usp=sharing)
