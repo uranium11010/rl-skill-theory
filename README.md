@@ -1,7 +1,7 @@
 # rl-skill-theory
 
 This repository contains code for our ICML 2024 paper,
-[When Do Skills Help Reinforcement Learning? A Theoretical Analysis of Temporal Abstractions](https://icml.cc/virtual/2024/poster/35079).
+[When Do Skills Help Reinforcement Learning? A Theoretical Analysis of Temporal Abstractions](https://arxiv.org/abs/2406.07897).
 If you use this code, please cite:
 ```bibtex
 @inproceedings{li2022rlskilltheory,
